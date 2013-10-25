@@ -1,3 +1,4 @@
+alias workspaces="cd ~/documents/workspaces && ls"
 alias workspace:make="workspace-make"
 alias workspace:remove="workspace-remove"
 
@@ -12,5 +13,10 @@ workspace-make() {
 }
 
 function workspace-remove() {
-  rm -rf ~/documents/workspaces/$1
+  # Confirm deletion of directory
+  read -p "Are you sure you want to delete? " -n 1 -r
+  
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    rm -rf ~/documents/workspaces/$1
+  fi
 }
