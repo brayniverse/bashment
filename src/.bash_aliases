@@ -2,5 +2,5 @@
 # BASH ALIAS LOADER
 ############################################################
 
-. ~/.aliases/git.aliases
-. ~/.aliases/laravel.aliases
+. ~/.aliases/git.aliases.bash
+. ~/.aliases/laravel.aliases.bash
