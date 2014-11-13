@@ -1,6 +1,7 @@
 alias workspaces="cd ~/documents/workspaces && ls"
 alias workspace:make="workspace-make"
 alias workspace:remove="workspace-remove"
+alias workspace:search="workspace-search"
 
 workspace() {
   cd ~/documents/workspaces/$1
@@ -19,4 +20,8 @@ function workspace-remove() {
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     rm -rf ~/documents/workspaces/$1
   fi
+}
+
+function workspace-search() {
+  ls ~/documents/workspaces | grep $1
 }
