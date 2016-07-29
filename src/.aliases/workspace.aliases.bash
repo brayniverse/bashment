@@ -6,12 +6,13 @@ alias workspace:archive="archiveWorkspace"
 
 workspace() {
   cd ~/Documents/Workspaces/$1
-  ls
+  ls -G
 }
 
 makeWorkspace() {
   mkdir ~/Documents/Workspaces/$1
   cd ~/Documents/Workspaces/$1
+  ls -G
 }
 
 destroyWorkspace() {
