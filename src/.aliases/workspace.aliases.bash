@@ -1,20 +1,19 @@
 alias workspaces="cd ~/documents/workspaces && ls"
-alias workspace:make="workspace-make"
-alias workspace:remove="workspace-remove"
-alias workspace:search="workspace-search"
+alias workspace:make="makeWorkspace"
+alias workspace:destroy="destroyWorkspace"
+alias workspace:search="searchWorkspaces"
 
 workspace() {
   cd ~/documents/workspaces/$1
   ls
 }
 
-workspace-make() {
+makeWorkspace() {
   mkdir ~/documents/workspaces/$1
   cd ~/documents/workspaces/$1
 }
 
-function workspace-remove() {
-  # Confirm deletion of directory
+destroyWorkspace() {
   read -p "Are you sure you want to delete? " -n 1 -r
   
   if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -22,6 +21,6 @@ function workspace-remove() {
   fi
 }
 
-function workspace-search() {
+searchWorkspaces() {
   ls ~/documents/workspaces | grep $1
 }
