@@ -2,5 +2,5 @@
 # BASH ALIAS LOADER
 ############################################################
 
-. ~/.aliases/git.aliases
-. ~/.aliases/workspace.aliases
+. ~/.aliases/git.bash
+. ~/.aliases/workspace.bash
